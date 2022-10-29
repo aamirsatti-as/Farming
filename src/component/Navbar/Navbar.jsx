@@ -1,11 +1,10 @@
 import React, {  useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './Navbar.css';
 
 
 
 export const Navbar = () => {
-    const navigate = useNavigate();
     const [active, setActive] = useState("nav__menu");
     const [icon, setIcon] = useState("nav__toggler");
     const navToggle = () => {
