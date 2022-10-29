@@ -1,11 +1,9 @@
 import React, { useContext, useState } from 'react'
 import './login.css'
-import { UserContext } from '../../App';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 	const navigate=useNavigate();
-	const{user,setUser} = useContext(UserContext);
 	const [fields, setFields] = useState({ email: "", password: "" });
 	let name, value;
 	
@@ -19,7 +17,7 @@ const Login = () => {
 	const sendData = async (e) => {
 		e.preventDefault(); // to pervent reloading issues.
 		const { email, password } = fields; // its object decontructuring.
-		console.log(user);
+		
 		const res = await fetch("https://aa-cattle-farm.herokuapp.com/admin/Login", {
 			method: "POST",
 			headers: {
@@ -37,7 +35,7 @@ const Login = () => {
 		}
 		if (res.status === 200) {
 			alert(data.message);
-			setUser(true);
+			
 			navigate('/')
 			
 		}

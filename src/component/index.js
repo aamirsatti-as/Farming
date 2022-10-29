@@ -22,7 +22,6 @@ import './iconmon.css'
 import { Link, NavLink } from 'react-router-dom'
 
  import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import GoogleMaps from '../Pages/GoogleMaps/googleMaps'
  const Index= () => {
   return (
     <> 
@@ -371,10 +370,10 @@ import GoogleMaps from '../Pages/GoogleMaps/googleMaps'
             </div>
          </div>
       </footer> */}
-      <div className='Map'>
+      {/* <div className='Map'>
          <p className='LocationText'>Location Of our Farm</p>
          <GoogleMaps/>
-      </div>
+      </div> */}
 
     </>
   )
